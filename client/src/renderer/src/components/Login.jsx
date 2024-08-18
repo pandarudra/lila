@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 const Login = () => {
   return (
     <div className=" w-1/2 h-96 ">
@@ -19,7 +20,13 @@ const Login = () => {
         >
           Login
         </button>
+
       </form>
+      <div className=" w-56 mx-48">
+        <span>Don't have an account ?
+        <NavLink to="/signIn" className="text-cyan-400"> Sign In</NavLink>
+        </span>
+      </div>
     </div>
   )
 }

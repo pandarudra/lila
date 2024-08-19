@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const SignIn = () => {
   const [userName, setUserName] = useState('')
@@ -74,6 +74,15 @@ const SignIn = () => {
         >
           Sign Up
         </button>
+        <div className="flex justify-center items-center">
+          <span>
+            Already have an account ?
+            <NavLink to="/" className="text-cyan-400 font-semibold">
+              {' '}
+              Log In
+            </NavLink>
+          </span>
+        </div>
       </div>
     </div>
   )

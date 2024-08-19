@@ -19,7 +19,7 @@ const SignIn = () => {
   return (
     <div className="h-screen w-screen flex justify-center items-center ">
       <div className="  flex flex-col gap-3  rounded-2xl">
-        <div className="flex justify-center items-center text-fuchsia-600 text-3xl">Sign In</div>
+        <div className="flex justify-center items-center text-fuchsia-600 text-3xl font-bold">Sign In</div>
         <form className="flex flex-col mx-5 gap-3 " onClick={handleSumbitBtn}>
           <div>
             <label htmlFor="a" className="text-fuchsia-800 font-bold">User Name:</label>
@@ -29,7 +29,7 @@ const SignIn = () => {
               placeholder="User Name"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-                className="px-3 w-96 h-9 rounded-xl border-2 border-cyan-900"
+                className="px-3 w-96 h-9 rounded border-2 border-cyan-900"
               htmlFor="a"
             />
           </div>
@@ -39,10 +39,10 @@ const SignIn = () => {
             <br />
             <input
               type="email"
-              placeholder="Password"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmial(e.target.value)}
-              className="px-3 w-96 h-9 rounded-xl border-2 border-cyan-900"
+              className="px-3 w-96 h-9 rounded border-2 border-cyan-900"
               htmlFor="b"
             />
           </div>
@@ -54,12 +54,12 @@ const SignIn = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="px-3 w-96 h-9 rounded-xl border-2 border-cyan-900"
+              className="px-3 w-96 h-9 rounded border-2 border-cyan-900"
               htmlFor="c"
             />
           </div>
         </form>
-        <button type="submit" className="h-8 w-32 bg-slate-500 mx-36 rounded-xl hover:bg-fuchsia-800" onClick={handleSumbitBtn} >
+        <button type="submit" className="h-8 w-32 mx-36 rounded-xl hover:bg-cyan-500 bg-fuchsia-800" onClick={handleSumbitBtn} >
                Sign Up
         </button>
       </div>

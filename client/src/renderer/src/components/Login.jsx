@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 const Login = () => {
   return (
-    <div className=" w-1/2 h-96 ">
+    <div className=" w-1/2 h-96  flex flex-col justify-center  ">
       <h1 className="text-4xl text-center font-mono ">Login</h1>
       <form className="flex flex-col gap-3 items-center">
         <input
@@ -20,11 +20,14 @@ const Login = () => {
         >
           Login
         </button>
-
       </form>
-      <div className=" w-56 mx-48">
-        <span>Don't have an account ?
-        <NavLink to="/signIn" className="text-cyan-400"> Sign In</NavLink>
+      <div className="flex justify-center items-center">
+        <span>
+          Don't have an account ?
+          <NavLink to="/signIn" className="text-cyan-400">
+            {" "}
+            Sign In
+          </NavLink>
         </span>
       </div>
     </div>

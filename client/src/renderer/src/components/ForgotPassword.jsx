@@ -1,30 +1,26 @@
 import { NavLink } from 'react-router-dom'
-const Login = () => {
+const ForgotPassword = () => {
   return (
-    <div className=" w-1/2 h-96  flex flex-col justify-center ">
-      <h1 className="text-4xl text-center font-mono ">Login</h1>
+   <div className=' h-screen w-screen flex justify-center items-center'>
+     <div className=" w-1/2 h-96  flex flex-col justify-center  ">
+      <h1 className="text-4xl text-center font-mono ">Change Your Password</h1>
       <form className="flex flex-col gap-3 items-center">
         <input
-          type="text"
-          placeholder="Username"
+          type="password"
+          placeholder="New Password"
           className="w-1/2 p-2 m-2 border border-gray-900 rounded"
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Confirm Password"
           className="w-1/2 p-2 m-2 border border-gray-900 rounded"
         />
-        <div >
-            <NavLink to="/forgotPassword" className="text-cyan-400 font-semibold">
-              {' '}
-              Forgot password ?
-            </NavLink>
-        </div>
+       
         <button
           type="submit"
           className="w-1/2 p-2 m-2 hover:bg-cyan-950 bg-cyan-400 text-white rounded"
         >
-          Login
+          CHANGE PASSWORD
         </button>
       </form>
       <div className="flex justify-center items-center">
@@ -37,7 +33,7 @@ const Login = () => {
         </span>
       </div>
     </div>
+   </div>
   )
 }
-
-export default Login
+export default  ForgotPassword

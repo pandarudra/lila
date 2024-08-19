@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { NavLink } from 'react-router-dom'
 const SignIn = () => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
@@ -12,7 +12,6 @@ const SignIn = () => {
         password: password,
         email:email
     }
-
     setData((prev)=> [prev,obj]);
     console.log(data);
   }
@@ -62,6 +61,15 @@ const SignIn = () => {
         <button type="submit" className="h-8 w-32 mx-36 rounded-xl hover:bg-cyan-500 bg-fuchsia-800" onClick={handleSumbitBtn} >
                Sign Up
         </button>
+        <div className="flex justify-center items-center">
+        <span>
+          Already have an account ?
+          <NavLink to="/" className="text-cyan-400 font-semibold">
+            {" "}
+            Log In
+          </NavLink>
+        </span>
+      </div>
       </div>
     </div>
   )

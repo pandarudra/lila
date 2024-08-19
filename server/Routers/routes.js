@@ -4,6 +4,7 @@ const router = express.Router();
 
 //GET
 router.post("/signup", signup);
+
 //POST
 
 //PUT

@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import axios from "axios"
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const SignIn = () => {
   const [userName, setUserName] = useState('')
@@ -7,8 +10,34 @@ const SignIn = () => {
   const [email, setEmail] = useState('')
   const [data, setData] = useState([])
 
-  function handleSumbitBtn(event) {
+ async function handleSumbitBtn(event) {
     event.preventDefault()
+    try {
+      const res=await axios.post("http://localhost:3000/api/signup",{
+        email,
+        username:userName,
+        password
+      })
+     toast.success("success")
+      // const res=await fetch("http://localhost:3000/api/signup",{
+      //   method:"POST",
+      //   headers:{
+      //     "Content-Type":"application/json"
+      //   },
+      //   body:JSON.stringify({
+      //     email,
+      //     username:userName,
+      //     password
+      //   })
+      //   })
+      //   const data=await res.json()
+      
+      // console.log(data)
+      
+    } catch (error) {
+      toast.error("error")
+      console.log(error);
+    }
     const obj = {
       userName: userName,
       password: password,
@@ -21,6 +50,7 @@ const SignIn = () => {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-gray-100">
+    <Toaster/>
       <div className="flex flex-col gap-3 p-6 rounded-2xl shadow-lg bg-white">
         <div className="flex justify-center items-center text-blue-600 text-3xl font-bold mb-4">
           Sign Up
